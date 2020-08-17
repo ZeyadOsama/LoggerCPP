@@ -1,7 +1,7 @@
 # LoggerCPP
 <p>
-  <img src="https://img.shields.io/pypi/status/Django.svg"/>
-  <img src="https://img.shields.io/badge/contributions-welcome-orange.svg"/>
+  <img src="https://img.shields.io/pypi/status/Django.svg" alt="stable"/>
+  <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions-welcome-orange"/>
 </p>
 C++ Logging System.
 
