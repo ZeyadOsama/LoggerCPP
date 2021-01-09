@@ -1,6 +1,6 @@
 # LoggerCPP
 
-[![CI Actions Status](https://github.com/ZeyadOsama/LoggerCPP/workflows/ci/badge.svg)](https://github.com/ZeyadOsama/LoggerCPP/actions)
+[![CI Actions Status](https://github.com/ZeyadOsama/LoggerCPP/workflows/CI/badge.svg)](https://github.com/ZeyadOsama/LoggerCPP/actions)
 <img src="https://img.shields.io/pypi/status/Django.svg" alt="stable"/>
 <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions-welcome-orange"/>
 
