@@ -28,7 +28,5 @@ jobs:
           cmake_args: -DLoggerCPP_BUILD_TESTS=ON;
 
       - name: Lint
+        uses: deep5050/cppcheck-action@v2.0.0
         continue-on-error: true
-        run: |
-          apt update && apt -y install cppcheck
-          cppcheck --project=bin/compile_commands.json
