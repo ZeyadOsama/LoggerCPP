@@ -139,7 +139,7 @@ When installing LoggerCPP, require it's version. For us, this is what ```major.m
 - ```minor``` - **MINOR breaking changes**; it allows us to add big new features.
 - ```patch``` - **NO breaking changes**; includes bug fixes and non-breaking new features.
 
-## Change Log
+## Changelog
 
 For all-time versions, please see the [CHANGELOG](CHANGELOG.rst) file.
 
