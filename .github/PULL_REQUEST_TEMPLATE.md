@@ -1,4 +1,4 @@
-# [LoggerCPP-VX.Y.Z] - <pull-request-title>
+# [LoggerCPP-vX.Y.Z] - <pull-request-title>
 
 ## Description
 
