@@ -26,5 +26,9 @@ jobs:
         with:
           config: ${{ matrix.configs }}
           cmake_args: -DLoggerCPP_BUILD_TESTS=ON;
-          run_tests: ON
-          unit_test_build: -DFIND_TESTS=ON
+
+      - name: Lint
+        continue-on-error: true
+        run: |
+          apt update && apt -y install cppcheck
+          cppcheck --project=bin/compile_commands.json
