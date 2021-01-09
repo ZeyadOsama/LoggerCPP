@@ -1,8 +1,10 @@
 # LoggerCPP
-<p>
-  <img src="https://img.shields.io/pypi/status/Django.svg" alt="stable"/>
-  <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions-welcome-orange"/>
-</p>
+
+[![CI Actions Status](https://github.com/ZeyadOsama/LoggerCPP/workflows/ci/badge.svg)](https://github.com/ZeyadOsama/LoggerCPP/actions)
+<img src="https://img.shields.io/pypi/status/Django.svg" alt="stable"/>
+<img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions-welcome-orange"/>
+
+## About
 C++ Logging System.
 
 ## Usage
@@ -10,12 +12,12 @@ In your  **```CMakeLists.txt```** file add these lines
 
 ```cmake
 add_subdirectory(logger)
-include_directories(include)
+include_directories(logger/include)
 ```
 
 Then add this header in the file you'd like to have your parser at
 ```c++
-#include <LoggerCPP.h>
+#include <logger/LoggerCPP.h>
 
 using namespace logger;
 ```
@@ -130,3 +132,17 @@ Configuration::RegisterOption(cl, OPTION::FILE_NAME, "<filename>.<extension>");
 2020-08-17 15:55:35.585  Main.Example CRIT This is a critical message.
 ```
 
+## Versioning
+When installing LoggerCPP, require it's version. For us, this is what ```major.minor.patch``` means:
+
+- ```major``` - **MAJOR breaking changes**; includes major new features, major changes in how the whole system works, and complete rewrites; it allows us to _considerably_ improve the product, and add features that were previously impossible.
+- ```minor``` - **MINOR breaking changes**; it allows us to add big new features.
+- ```patch``` - **NO breaking changes**; includes bug fixes and non-breaking new features.
+
+## Change Log
+
+For all-time versions, please see the [CHANGELOG](CHANGELOG.rst) file.
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details
