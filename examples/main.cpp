@@ -1,8 +1,10 @@
 #include <iostream>
 
-#include <LoggerCPP.h>
+#include <logger/LoggerCPP.hpp>
 
-using namespace Log;
+using namespace logger;
+using namespace logger::options;
+using namespace logger::configurations;
 
 class Test {
 private:
@@ -28,7 +30,7 @@ int main() {
 
     dout << "WTF" << std::endl;
 
-    // Configure the Output objects
+    // Configure the output objects
     Configuration::ConfigurationList cl;
     Configuration::RegisterOutput(cl, OUTPUT_STREAM::CONSOLE);
     Configuration::RegisterOutput(cl, OUTPUT_STREAM::FILE);
@@ -39,14 +41,14 @@ int main() {
     l1.warn() << "NO logs before configure()";
 
     try {
-        // Configure the Log Manager (create the Output objects)
+        // Configure the Log Manager (create the output objects)
         Manager::Configure(cl);
     }
     catch (std::exception &e) {
         std::cerr << e.what();
     }
 
-    // Test outputs of various kind of variables, and some common Stream manipulations.
+    // Test outputs of various kind of variables, and some common concrete manipulations.
     std::string str("string");
     unsigned int ui = 123;
     double dbl = -0.023f;
@@ -63,7 +65,7 @@ int main() {
     l1.error() << "Error.";
     l1.critic() << "Critic.";
 
-    // Modify the Output Level of the underlying Channel, and test various severity Level again
+    // Modify the output Level of the underlying Channel, and test various severity Level again
     l1.SetSeverity(WARN);
     l1.debug() << "NO Debug.";     // NO more debug logs
     l1.info() << "NO Info.";      // NO more info logs
@@ -102,7 +104,7 @@ int main() {
     // Show how to set the current Channel configuration (restored from a file, for instance)
     Manager::GetChannelConfiguration(ChannelConfigPtr);
 
-    // Terminate the Log Manager (destroy the Output objects)
+    // Terminate the Log Manager (destroy the output objects)
     Manager::Terminate();
     l1.warn() << "NO more logs after terminate()";
 

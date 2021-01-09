@@ -7,16 +7,17 @@ C++ Logging System.
 
 ## Usage
 In your  **```CMakeLists.txt```** file add these lines
+
 ```cmake
 add_subdirectory(logger)
-include_directories(logger/include)
+include_directories(include)
 ```
 
 Then add this header in the file you'd like to have your parser at
 ```c++
 #include <LoggerCPP.h>
 
-using namespace Log;
+using namespace logger;
 ```
 
 ### Configurations
@@ -35,8 +36,8 @@ OUTPUT_STREAM::FILE
 ```
 
 ```c++
-// Configure the Output objects
-Configuration::RegisterOutput(cl, "<output-stream>");
+// Configure the output objects
+Configuration::RegisterOutput(cl, "<output-concrete>");
 ```
 ```c++
 // Example
