@@ -19,8 +19,3 @@ jobs:
           cmake_args: -DLoggerCPP_BUILD_EXAMPLES=ON;-DLoggerCPP_BUILD_TESTS=ON;-DFIND_MODULES=ON;-DENABLE_TIDY=ON
           run_tests: ON
           unit_test_build: -DFIND_TESTS=ON
-          create_package: ON
-      - uses: actions/upload-artifact@v2
-        with:
-          path: build/*.tar.gz
-          name: artifact_${{ matrix.os }}_${{ matrix.configs }}.tar.gz
